@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="stylesheet"> 
+         <script src="js/knockout-3.5.0.js"></script>
+    </head>
+    <body>
+      
+        <script>
+            var myViewModel={
+                "name":"John",
+                "age":33
+            }
+          </script>
+            
+            
+        <div id="app">
+            <p>The person's name is <span data-bind="text:name"></span></p>
+            <p>The person's age is <span data-bind="text:age"></span></p>
+        
+        </div>
+          <div id="normal"><p>This is normal content</p></div>
+        <script>
+            ko.applyBindings(myViewModel, document.getElementById("app"));
+        </script>
+    <script>
+      
+     </script>
+    </body>
+</html>

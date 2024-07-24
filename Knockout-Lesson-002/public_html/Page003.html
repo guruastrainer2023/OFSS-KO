@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Page003.css" rel="stylesheet">
+        <script src="js/knockout-3.5.0.js"></script>
+    </head>
+    <body>
+        <div>
+            <ul data-bind="foreach: planets">
+                <li>
+                    Planet: <b data-bind="text: name"> </b>
+                    <div data-bind="if: capital">
+                        Capital: <b data-bind="text: capital.cityName"> </b>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <script>
+         ko.applyBindings({
+            planets: [
+               { name: 'Mercury', capital: null }, 
+              { name: 'Earth', capital: { cityName: 'Barnsley' } }        
+          ]
+        });
+        </script>
+    </body>
+</html>

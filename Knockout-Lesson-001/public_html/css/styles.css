@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Jul, 2024, 7:29:32 AM
+    Author     : Guru
+*/
+p{
+    margin: 2cm;
+    border: solid thin black;
+    font-family:"verdanan";
+    padding: 5mm;
+}
+table{
+    margin: 2cm;
+    border: solid thin black;
+    font-family:"verdanan";
+    padding: 5mm;
+    border-collapse: collapse;
+}
+td{
+   border: solid thin black;  
+}
+th{
+   border: solid thin black;  
+   background-color: lightgray
+}

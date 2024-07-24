@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="css/styles.css" rel="stylesheet"> 
+
+        <script src="js/knockout-3.5.0.js"></script>
+
+    </head>
+    <body>
+        <script>
+            function AppViewModel() {
+                this.firstName = ko.observable('Bob');
+                this.lastName = ko.observable('Smith');
+                this.fullName = ko.computed(function () {
+                    return this.firstName() + " " + this.lastName();
+                }, this);
+
+            }
+        </script>
+        <div><p data-bind="text: fullName"></p></div>
+        
+        <script>
+            ko.applyBindings(new AppViewModel());
+        </script>
+    </body>
+</html>

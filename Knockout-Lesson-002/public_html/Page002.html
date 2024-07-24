@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Page002.css" rel="stylesheet">
+        <script src="js/knockout-3.5.0.js"></script>
+    </head>
+    <body>
+        <div>
+            <label><input type="checkbox" data-bind="checked: displayMessage" /> Display message</label>
+
+            <div data-bind="if: displayMessage">Here is a message. Astonishing.</div>
+        </div>
+        <script>
+            ko.applyBindings({
+                displayMessage: ko.observable(false)
+            });
+
+        </script>
+    </body>
+</html>

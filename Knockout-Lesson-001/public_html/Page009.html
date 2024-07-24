@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Page009.css" rel="stylesheet">
+         <script src="js/knockout-3.5.0.js"></script>
+    </head>
+    <body>
+        <div data-bind="class: profitStatus">
+                Profit Information
+        </div>
+        <script>
+
+            var viewModel = {
+                currentProfit: ko.observable(150000)
+            };
+
+            // Evalutes to a positive value, so initially we apply the "profitPositive" class
+            viewModel.profitStatus = ko.pureComputed(function () {
+                return this.currentProfit() < 0 ? "profitWarning" : "profitPositive";
+            }, viewModel);
+
+            // Causes the "profitPositive" class to be removed and "profitWarning" class to be added
+            //viewModel.currentProfit(-50);
+            ko.applyBindings(viewModel);
+
+        </script>
+    </body>
+</html>
